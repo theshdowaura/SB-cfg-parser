@@ -26,9 +26,9 @@ type DNSServer struct {
 			DHCP	dhcp://auto 或 dhcp://en0
 			FakeIP	fakeip
 	*/
-	AddressResolver string `json:"address_resolver"` //if serverAddress include host filed else it must filed
+	AddressResolver string `json:"address_resolver,omitempty"` //if serverAddress include host filed else it must filed
 	AddressStrategy string `json:"address_strategy"`
-	Strategy        string `json:"strategy"`
+	Strategy        string `json:"strategy"` //Default parsing strategy.
 	Detour          string `json:"detour"`
 	ClientSubnet    string `json:"client_subnet"`
 }
